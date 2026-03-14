@@ -1,0 +1,190 @@
+/* ===== Base ===== */
+
+body {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  max-width: 760px;
+  margin: auto;
+  padding: 20px;
+  line-height: 1.65;
+  color: #111;
+}
+
+main {
+  margin-top: 40px;
+}
+
+/* ===== Navigation ===== */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.nav-name {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.dot {
+  color: #888;
+}
+
+.nav-links a {
+  margin-left: 18px;
+  text-decoration: none;
+  color: #333;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+.nav-links .active {
+  font-weight: 600;
+}
+
+/* ===== Page Titles ===== */
+
+.page-title {
+  margin-bottom: 5px;
+}
+
+.page-sub {
+  color: #666;
+  margin-bottom: 40px;
+}
+
+/* ===== Blog ===== */
+
+.blog-list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.note-date {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+.note-title {
+  margin: 4px 0 8px 0;
+}
+
+.note-title a {
+  color: #111;
+  text-decoration: none;
+}
+
+.note-title a:hover {
+  text-decoration: underline;
+}
+
+/* ===== Projects ===== */
+
+.project {
+  margin-bottom: 50px;
+}
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.project-meta {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.project-link {
+  text-decoration: none;
+}
+
+/* ===== CV ===== */
+
+.cv-section {
+  margin-bottom: 35px;
+}
+
+.cv-item {
+  margin-bottom: 18px;
+}
+
+.cv-item-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cv-item-title {
+  font-weight: 600;
+}
+
+.cv-item-meta {
+  color: #666;
+}
+
+.skills-row {
+  display: flex;
+  gap: 10px;
+}
+
+.skills-label {
+  font-weight: 600;
+  min-width: 90px;
+}
+
+/* ===== Footer ===== */
+
+footer {
+  margin-top: 60px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+}
+
+.footer-links {
+  display: flex;
+  gap: 18px;
+}
+
+.footer-copy {
+  margin-top: 8px;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+/* ===== Blog posts ===== */
+
+.post-date {
+  color: #666;
+  margin-bottom: 25px;
+}
+
+pre {
+  background: #f6f6f6;
+  padding: 12px;
+  overflow-x: auto;
+}
+code {
+  background: #f5f5f5;
+  padding: 2px 5px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+pre {
+  background: #f5f5f5;
+  padding: 14px;
+  overflow-x: auto;
+}
+code {
+  background: #f5f5f5;
+  padding: 2px 5px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+pre {
+  background: #f5f5f5;
+  padding: 14px;
+  overflow-x: auto;
+}
