@@ -203,3 +203,17 @@ pre {
 .nav-name:hover {
   text-decoration: none;
 }
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-extra {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.footer-extra a {
+  color: inherit;
+}
