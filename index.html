@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aryan — Hardware Engineer</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;1,400&family=IBM+Plex+Serif:ital,wght@0,400;0,500;1,400&display=swap');
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ink: #1a1a18;
+    --muted: #888880;
+    --rule: #d8d8d0;
+    --page: #f9f8f4;
+  }
+
+  html { font-size: 16px; }
+
+  body {
+    background: var(--page);
+    color: var(--ink);
+    font-family: 'IBM Plex Serif', Georgia, serif;
+    line-height: 1.7;
+    padding: 0 1.5rem;
+  }
+
+  .wrap {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 5rem 0 6rem;
+  }
+
+  header {
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 2.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .name {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 0.6rem;
+  }
+
+  h1 {
+    font-family: 'IBM Plex Serif', serif;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+    margin-bottom: 1.2rem;
+  }
+
+  .tagline {
+    font-size: 1rem;
+    color: var(--muted);
+    font-style: italic;
+    margin-bottom: 1.4rem;
+  }
+
+  .links {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.78rem;
+  }
+
+  .links a {
+    color: var(--ink);
+    text-decoration: none;
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 1px;
+    transition: border-color 0.15s;
+  }
+
+  .links a:hover { border-color: var(--ink); }
+
+  section { margin-bottom: 3.5rem; }
+
+  .section-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 1.5rem;
+  }
+
+  .about p {
+    font-size: 1rem;
+    margin-bottom: 0.9rem;
+    max-width: 62ch;
+  }
+
+  .project {
+    padding: 1.5rem 0;
+    border-top: 1px solid var(--rule);
+  }
+
+  .project:last-child { border-bottom: 1px solid var(--rule); }
+
+  .project-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .project-title {
+    font-family: 'IBM Plex Serif', serif;
+    font-size: 1.05rem;
+    font-weight: 500;
+  }
+
+  .project-meta {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.73rem;
+    color: var(--muted);
+    white-space: nowrap;
+  }
+
+  .project-desc {
+    font-size: 0.93rem;
+    color: #3a3a36;
+    margin-bottom: 0.8rem;
+    max-width: 58ch;
+  }
+
+  .tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .tag {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.68rem;
+    color: var(--muted);
+    border: 1px solid var(--rule);
+    padding: 0.15rem 0.5rem;
+    border-radius: 2px;
+  }
+
+  .exp-item {
+    padding: 1.2rem 0;
+    border-top: 1px solid var(--rule);
+  }
+
+  .exp-item:last-child { border-bottom: 1px solid var(--rule); }
+
+  .exp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.35rem;
+  }
+
+  .exp-role {
+    font-weight: 500;
+    font-size: 0.97rem;
+  }
+
+  .exp-where {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.73rem;
+    color: var(--muted);
+  }
+
+  .exp-desc {
+    font-size: 0.9rem;
+    color: #3a3a36;
+    max-width: 58ch;
+  }
+
+  .skill-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+  }
+
+  .skill-row { display: contents; }
+
+  .skill-row > div {
+    padding: 0.7rem 0;
+    border-top: 1px solid var(--rule);
+    font-size: 0.88rem;
+  }
+
+  .skill-row:last-child > div { border-bottom: 1px solid var(--rule); }
+
+  .skill-cat {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.72rem;
+    color: var(--muted);
+    padding-right: 1rem;
+    display: flex;
+    align-items: center;
+  }
+
+  footer {
+    border-top: 1px solid var(--rule);
+    padding-top: 1.5rem;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.73rem;
+    color: var(--muted);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="name">Aryan · Southampton, UK</div>
+    <h1>Hardware &amp; Verification Engineer</h1>
+    <p class="tagline">MSc Microelectronics Systems Design, University of Southampton</p>
+    <div class="links">
+      <a href="#">github.com/aryan</a>
+      <a href="#">linkedin.com/in/aryan</a>
+      <a href="#">resume.pdf ↓</a>
+      <a href="mailto:aryan@soton.ac.uk">aryan@soton.ac.uk</a>
+    </div>
+  </header>
+
+  <section class="about">
+    <div class="section-label">About</div>
+    <p>
+      I design and verify digital hardware — from RISC-V pipelines to VLSI layouts.
+      My work sits at the boundary of RTL design, functional verification, and low-power architecture.
+    </p>
+    <p>
+      Previously a VLSI design intern at Maven Silicon, where I worked on a 32-bit RISC-V processor.
+      Co-inventor of a patent on low-power ALU design using enable gating.
+      Targeting graduate hardware and verification engineering roles.
+    </p>
+  </section>
+
+  <section>
+    <div class="section-label">Projects</div>
+
+    <div class="project">
+      <div class="project-header">
+        <span class="project-title">FPGA Weather Station</span>
+        <span class="project-meta">2024–25 · SystemVerilog</span>
+      </div>
+      <p class="project-desc">
+        Full RTL design targeting a 32.768 kHz clock. Integrates SPI (MS5803 barometer),
+        ADC wind vane, LCD controller, and a 4-way round-robin memory arbiter.
+        Verified with Cadence Xcelium behavioural testbenches.
+      </p>
+      <div class="tags">
+        <span class="tag">SystemVerilog</span>
+        <span class="tag">SPI</span>
+        <span class="tag">FSM</span>
+        <span class="tag">Xcelium</span>
+        <span class="tag">FPGA</span>
+      </div>
+    </div>
+
+    <div class="project">
+      <div class="project-header">
+        <span class="project-title">NEO Accelerator</span>
+        <span class="project-meta">2024 · Cyclone IV E</span>
+      </div>
+      <p class="project-desc">
+        4-stage pipelined SystemVerilog module computing the Nonlinear Energy Operator
+        ψ[n] = x[n−1]² − x[n]·x[n−2]. Synthesised on Cyclone IV E via Quartus Prime.
+        Test vectors generated in MATLAB.
+      </p>
+      <div class="tags">
+        <span class="tag">Pipelining</span>
+        <span class="tag">Quartus</span>
+        <span class="tag">MATLAB</span>
+        <span class="tag">DSP</span>
+      </div>
+    </div>
+
+    <div class="project">
+      <div class="project-header">
+        <span class="project-title">8-bit Bitslice Multiplier</span>
+        <span class="project-meta">2024 · TSMC 180nm</span>
+      </div>
+      <p class="project-desc">
+        Full design flow from Magic VLSI layout through RTL, synthesis, and scan-chain
+        integration. Shift-and-add algorithm, 11-state control FSM, tristate bus discipline,
+        SDI/SDO test mode. TSMC 180nm technology.
+      </p>
+      <div class="tags">
+        <span class="tag">Magic VLSI</span>
+        <span class="tag">Synopsys DC</span>
+        <span class="tag">Scan Chain</span>
+        <span class="tag">TSMC 180nm</span>
+      </div>
+    </div>
+
+    <div class="project">
+      <div class="project-header">
+        <span class="project-title">32-bit RISC-V Processor</span>
+        <span class="project-meta">Maven Silicon Internship</span>
+      </div>
+      <p class="project-desc">
+        5-stage pipeline RTL design during an industry VLSI internship.
+        Co-invented a low-power ALU architecture using enable gating — now a filed patent.
+      </p>
+      <div class="tags">
+        <span class="tag">RISC-V</span>
+        <span class="tag">Pipeline</span>
+        <span class="tag">Low-Power</span>
+        <span class="tag">Patent</span>
+      </div>
+    </div>
+
+  </section>
+
+  <section>
+    <div class="section-label">Experience &amp; Education</div>
+
+    <div class="exp-item">
+      <div class="exp-header">
+        <span class="exp-role">VLSI Design Intern</span>
+        <span class="exp-where">Maven Silicon · 2023</span>
+      </div>
+      <p class="exp-desc">32-bit RISC-V processor design. Patent co-inventor for low-power ALU using enable gating.</p>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-header">
+        <span class="exp-role">MSc Microelectronics Systems Design</span>
+        <span class="exp-where">University of Southampton · 2024–25</span>
+      </div>
+      <p class="exp-desc">EDA tools: Cadence Xcelium, Synopsys Design Compiler, Magic VLSI. Coursework in secure hardware, VLSI design, and computer architecture.</p>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-header">
+        <span class="exp-role">BTech Electronics &amp; Instrumentation</span>
+        <span class="exp-where">VIT Vellore · 8.15 CGPA</span>
+      </div>
+      <p class="exp-desc">Foundation in digital electronics, embedded systems, and signal processing.</p>
+    </div>
+
+  </section>
+
+  <section>
+    <div class="section-label">Skills</div>
+    <div class="skill-grid">
+      <div class="skill-row">
+        <div class="skill-cat">Languages</div>
+        <div>SystemVerilog, Verilog, C++, MATLAB, Python</div>
+      </div>
+      <div class="skill-row">
+        <div class="skill-cat">EDA Tools</div>
+        <div>Cadence Xcelium, Synopsys DC, Quartus Prime, Magic VLSI, HSPICE</div>
+      </div>
+      <div class="skill-row">
+        <div class="skill-cat">Techniques</div>
+        <div>RTL design, functional verification, FSM design, pipelining, DFT/scan chain</div>
+      </div>
+      <div class="skill-row">
+        <div class="skill-cat">Targets</div>
+        <div>ARM, Apple, Imagination Technologies, Cirrus Logic, Infineon</div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <span>Aryan · as16u25@soton.ac.uk</span>
+    <span>Last updated March 2025</span>
+  </footer>
+
+</div>
+</body>
+</html>
