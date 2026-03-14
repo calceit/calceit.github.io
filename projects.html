@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects — Aryan Sahu</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav>
+    <div class="nav-name">Aryan<span class="dot">.</span></div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="cv.html">CV</a>
+      <a href="projects.html" class="active">Projects</a>
+      <a href="blog.html">Blog</a>
+      <a href="Aryan_Sahu_Resume.pdf" target="_blank" class="nav-btn">Resume ↓</a>
+    </div>
+  </nav>
+
+  <main>
+
+    <h1 class="page-title">Projects</h1>
+
+    <article class="project">
+      <div class="project-header">
+        <div>
+          <h2 class="project-title">FPGA Weather Station</h2>
+          <span class="project-meta">2024–25 &middot; SystemVerilog &middot; Cadence Xcelium</span>
+        </div>
+        <a href="https://github.com/calceit" class="project-link" target="_blank">GitHub →</a>
+      </div>
+      <div class="project-body">
+        <p>A full RTL weather station design targeting a 32.768 kHz clock on an FPGA. The system integrates multiple sensors and peripherals, all coordinated through a custom memory controller with a 4-way round-robin arbiter.</p>
+        <p>The SPI interface drives an MS5803-02BA pressure and temperature sensor. Raw ADC readings from the barometer are compensated using a sequence of PROM coefficients (C1–C6) following the MS5803 datasheet calibration procedure. A separate ADC-based wind vane module reads wind direction.</p>
+        <p>An LCD controller formats and displays live pressure, temperature, wind direction, and elapsed time. The memory controller manages read/write arbitration between all subsystems with no bus contention.</p>
+        <p>Verified using Cadence Xcelium with a behavioural testbench that models the SPI MISO responses of the MS5803, including PROM read and D1/D2 conversion phases.</p>
+      </div>
+    </article>
+
+    <article class="project">
+      <div class="project-header">
+        <div>
+          <h2 class="project-title">NEO Accelerator</h2>
+          <span class="project-meta">2024 &middot; SystemVerilog &middot; Cyclone IV E</span>
+        </div>
+        <a href="https://github.com/calceit" class="project-link" target="_blank">GitHub →</a>
+      </div>
+      <div class="project-body">
+        <p>A 4-stage pipelined hardware accelerator for the Nonlinear Energy Operator (NEO), computing ψ[n] = x[n−1]² − x[n]·x[n−2] on streaming input data.</p>
+        <p>The NEO is used in biomedical signal processing (e.g. spike detection in neural recordings) where real-time, low-latency computation matters. The pipeline processes one sample per clock cycle at full throughput after the initial fill latency.</p>
+        <p>Synthesised on a Cyclone IV E FPGA via Quartus Prime. Test vectors were generated in MATLAB using 4-bit signed fixed-point values and verified against the RTL output.</p>
+      </div>
+    </article>
+
+    <article class="project">
+      <div class="project-header">
+        <div>
+          <h2 class="project-title">8-bit Bitslice Multiplier</h2>
+          <span class="project-meta">2024 &middot; TSMC 180nm &middot; Magic VLSI / Synopsys DC</span>
+        </div>
+      </div>
+      <div class="project-body">
+        <p>A full VLSI design flow for an 8-bit shift-and-add multiplier in TSMC 180nm technology. The project covered every stage from schematic and layout through RTL, synthesis, and test integration.</p>
+        <p>The control FSM has 11 states managing the shift-and-add algorithm. A tristate bus connects the datapath to shared resources. Scan chain (SDI/SDO/Test) was added for DFT, enabling full scan-based testing of all internal state.</p>
+        <p>Layout was done in Magic VLSI following TSMC 180nm design rules. Logic synthesis was performed with Synopsys Design Compiler, targeting area and timing constraints.</p>
+      </div>
+    </article>
+
+    <article class="project">
+      <div class="project-header">
+        <div>
+          <h2 class="project-title">32-bit RISC-V Processor</h2>
+          <span class="project-meta">Maven Silicon Internship &middot; 2023</span>
+        </div>
+      </div>
+      <div class="project-body">
+        <p>A 5-stage pipelined 32-bit RISC-V processor designed during an industry VLSI internship at Maven Silicon. The pipeline implements the standard fetch, decode, execute, memory, and writeback stages with hazard detection and forwarding logic.</p>
+        <p>During this project, a novel low-power ALU architecture was co-invented using enable gating to suppress switching activity in unused functional units. This work is now a filed patent.</p>
+      </div>
+    </article>
+
+  </main>
+
+  <footer>
+    <div class="footer-links">
+      <a href="https://github.com/calceit" target="_blank" aria-label="GitHub">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+      </a>
+      <a href="https://linkedin.com/in/aryan-s4hu/" target="_blank" aria-label="LinkedIn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+      </a>
+      <a href="mailto:aryan_sahu@outlook.com" aria-label="Email">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+      </a>
+    </div>
+    <div class="footer-copy">Aryan Sahu &middot; calceit.com</div>
+  </footer>
+
+</body>
+</html>

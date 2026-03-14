@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Aryan Sahu</title>
+<title>CV — Aryan Sahu</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,8 +11,8 @@
   <nav>
     <div class="nav-name">Aryan<span class="dot">.</span></div>
     <div class="nav-links">
-      <a href="index.html" class="active">Home</a>
-      <a href="cv.html">CV</a>
+      <a href="index.html">Home</a>
+      <a href="cv.html" class="active">CV</a>
       <a href="projects.html">Projects</a>
       <a href="blog.html">Blog</a>
       <a href="Aryan_Sahu_Resume.pdf" target="_blank" class="nav-btn">Resume ↓</a>
@@ -20,16 +20,61 @@
   </nav>
 
   <main>
-    <section class="hero">
-      <h1>Hi, I'm Aryan.</h1>
-      <p class="hero-sub">Hardware &amp; Verification Engineer. MSc Microelectronics Systems Design at the University of Southampton.</p>
-      <p class="hero-body">I design and verify digital hardware — RTL, FSMs, pipelining, low-power design. Previously at Maven Silicon working on a 32-bit RISC-V processor. Co-inventor of a patent on low-power ALU design.</p>
-      <p class="hero-body">I'm interested in computer architecture, formal verification, and pushing silicon to do more with less power. Currently looking for graduate hardware and verification roles.</p>
-      <div class="hero-links">
-        <a href="projects.html">See my projects →</a>
-        <a href="cv.html">View my CV →</a>
+
+    <h1 class="page-title">CV</h1>
+
+    <section class="cv-section">
+      <h2>Experience</h2>
+
+      <div class="cv-item">
+        <div class="cv-item-header">
+          <span class="cv-item-title">VLSI Design Intern</span>
+          <span class="cv-item-meta">Maven Silicon &middot; 2023</span>
+        </div>
+        <p>32-bit RISC-V processor design (5-stage pipeline). Co-invented a low-power ALU architecture using enable gating — now a filed patent.</p>
+      </div>
+
+    </section>
+
+    <section class="cv-section">
+      <h2>Education</h2>
+
+      <div class="cv-item">
+        <div class="cv-item-header">
+          <span class="cv-item-title">MSc Microelectronics Systems Design</span>
+          <span class="cv-item-meta">University of Southampton &middot; 2024–25</span>
+        </div>
+        <p>EDA tools: Cadence Xcelium, Synopsys Design Compiler, Magic VLSI. Modules include secure hardware, VLSI design, and computer architecture.</p>
+      </div>
+
+      <div class="cv-item">
+        <div class="cv-item-header">
+          <span class="cv-item-title">BTech Electronics &amp; Instrumentation Engineering</span>
+          <span class="cv-item-meta">VIT Vellore &middot; 8.15 CGPA</span>
+        </div>
+        <p>Digital electronics, embedded systems, signal processing.</p>
+      </div>
+
+    </section>
+
+    <section class="cv-section">
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        <div class="skills-row">
+          <span class="skills-label">Languages</span>
+          <span>SystemVerilog, Verilog, C++, MATLAB, Python</span>
+        </div>
+        <div class="skills-row">
+          <span class="skills-label">EDA Tools</span>
+          <span>Cadence Xcelium, Synopsys DC, Quartus Prime, Magic VLSI, HSPICE</span>
+        </div>
+        <div class="skills-row">
+          <span class="skills-label">Techniques</span>
+          <span>RTL design, functional verification, FSM design, pipelining, DFT/scan chain</span>
+        </div>
       </div>
     </section>
+
   </main>
 
   <footer>

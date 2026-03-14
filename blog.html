@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Aryan Sahu</title>
+<title>Blog — Aryan Sahu</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,25 +11,41 @@
   <nav>
     <div class="nav-name">Aryan<span class="dot">.</span></div>
     <div class="nav-links">
-      <a href="index.html" class="active">Home</a>
+      <a href="index.html">Home</a>
       <a href="cv.html">CV</a>
       <a href="projects.html">Projects</a>
-      <a href="blog.html">Blog</a>
+      <a href="blog.html" class="active">Blog</a>
       <a href="Aryan_Sahu_Resume.pdf" target="_blank" class="nav-btn">Resume ↓</a>
     </div>
   </nav>
 
   <main>
-    <section class="hero">
-      <h1>Hi, I'm Aryan.</h1>
-      <p class="hero-sub">Hardware &amp; Verification Engineer. MSc Microelectronics Systems Design at the University of Southampton.</p>
-      <p class="hero-body">I design and verify digital hardware — RTL, FSMs, pipelining, low-power design. Previously at Maven Silicon working on a 32-bit RISC-V processor. Co-inventor of a patent on low-power ALU design.</p>
-      <p class="hero-body">I'm interested in computer architecture, formal verification, and pushing silicon to do more with less power. Currently looking for graduate hardware and verification roles.</p>
-      <div class="hero-links">
-        <a href="projects.html">See my projects →</a>
-        <a href="cv.html">View my CV →</a>
-      </div>
-    </section>
+
+    <h1 class="page-title">Blog</h1>
+    <p class="page-sub">Notes, things I've figured out, and occasionally longer writeups.</p>
+
+    <div class="blog-list">
+
+      <article class="note">
+        <div class="note-date">Mar 2025</div>
+        <div class="note-title">Debugging SPI MISO testbench models in Xcelium</div>
+        <p>Tracking down a baro_loop increment bug caused by a CS guard firing after nBaroCS goes high. The fix was moving the increment outside the CS block — off-by-one errors in state machine transitions are easy to miss when the guard condition depends on the signal you just changed.</p>
+      </article>
+
+      <article class="note">
+        <div class="note-date">Feb 2025</div>
+        <div class="note-title">MAGIC multiply-shift trick for avoiding hardware dividers</div>
+        <p>Replacing divide-by-N with multiply-then-shift keeps the critical path short and avoids instantiating a divider. Useful for fixed scaling factors where the constant is known at synthesis time.</p>
+      </article>
+
+      <article class="note">
+        <div class="note-date">Jan 2025</div>
+        <div class="note-title">Placeholder — add your own entry here</div>
+        <p>Replace this with something you learnt, a bug you fixed, a technique you found useful, or anything else worth writing down.</p>
+      </article>
+
+    </div>
+
   </main>
 
   <footer>
