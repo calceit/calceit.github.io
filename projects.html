@@ -30,8 +30,7 @@
         <a href="weather-station-architecture.html" class="project-link">Architecture Diagram →</a>
       </div>
       <div class="project-body">
-        <p>A weather station ASIC targeting the AMS 0.35µm process, integrating rain, wind direction, and wind speed sensors with both an 8-bit character LCD & a 48x84 pixel LCD.</p>
-        <p>In this team project, I was responsible for mapping out the system's architecture, the memory controller design, and the 8-bit LCD interface.</p>
+        <p>A weather station ASIC targeting the AMS 0.35µm process, integrating Single Port SRAM, rain, wind direction, and wind speed sensors with both an 8-bit character LCD, and a 48x84 pixel LCD.</p>
         <p>The LCD Controller formats and displays live rain, wind speed, wind direction, and elapsed time. The Memory Controller uses a request/grant interface to coordinate access to shared SRAM. Display accesses are prioritised to ensure low-latency framebuffer updates, while write requests from the rain and wind sensor modules are arbitrated using a round-robin policy. The system interfaces with an 8-kbit single-port SRAM macrocell for intermediate data storage.</p>
         <p>The RTL was implemented in SystemVerilog and validated through the full ASIC design flow: verification with Cadence Xcelium, synthesis using Synopsys Design Compiler, place-and-route with Cadence Encounter, and post-layout processing in Cadence Virtuoso.</p>
       </div>
@@ -61,8 +60,8 @@
       </div>
       <div class="project-body">
         <p>An 8-bit shift-and-add multiplier created using the custom TSMC 180nm library. The project covered every stage from schematic and layout through RTL, synthesis, and test integration.</p>
-        <p>The control FSM has 11 states managing the shift-and-add algorithm.</p>
         <p>Each bitslice implements a simple multiplication algorithm, a tristate bus connects the datapath to shared resources. Scan chain (SDI/SDO/Test) was added for DFT, enabling full scan-based testing of all internal state.</p>
+                <p>The control FSM has 11 states managing the shift-and-add algorithm.</p>
         <p>Magic was used for the layout, and the design was verified using SystemVerilog & Cadence Xcelium.</p>
       </div>
     </article>
