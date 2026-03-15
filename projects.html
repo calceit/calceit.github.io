@@ -30,7 +30,7 @@
         <a href="https://github.com/calceit" class="project-link" target="_blank">GitHub →</a>
       </div>
       <div class="project-body">
-        <p>A weather station ASIC targeting the AMS 0.35µm process, integrating rain, wind direction, and wind speed sensors with both an 8-bit character LCD & a 84x48 pixel LCD.</p>
+        <p>A weather station ASIC targeting the AMS 0.35µm process, integrating rain, wind direction, and wind speed sensors with both an 8-bit character LCD & a 48x84 pixel LCD.</p>
         <p>In this team project, I was responsible for mapping out the system's architecture, the memory controller design, and the 8-bit LCD interface.</p>
         <p>The LCD Controller formats and displays live rain, wind speed, wind direction, and elapsed time. The Memory Controller uses a request/grant interface to coordinate access to shared SRAM. Display accesses are prioritised to ensure low-latency framebuffer updates, while write requests from the rain and wind sensor modules are arbitrated using a round-robin policy. The system interfaces with an 8-kbit single-port SRAM macrocell for intermediate data storage.</p>
         <p>The RTL was implemented in SystemVerilog and validated through the full ASIC design flow: verification with Cadence Xcelium, synthesis using Synopsys Design Compiler, place-and-route with Cadence Encounter, and post-layout processing in Cadence Virtuoso.</p>
