@@ -63,7 +63,7 @@
         <p>An 8-bit shift-and-add multiplier created using the custom TSMC 180nm library. The project covered every stage from schematic and layout through RTL, synthesis, and test integration.</p>
         <p>The control FSM has 11 states managing the shift-and-add algorithm.</p>
         <p>Each bitslice implements a simple multiplication algorithm, a tristate bus connects the datapath to shared resources. Scan chain (SDI/SDO/Test) was added for DFT, enabling full scan-based testing of all internal state.</p>
-        <p>Layout was done in Magic VLSI following TSMC 180nm design rules. The design was verified using SystemVerilog & Cadence Xcelium.</p>
+        <p>Magic was used for the layout, and the design was verified using SystemVerilog & Cadence Xcelium.</p>
       </div>
     </article>
  
@@ -104,7 +104,6 @@
       </div>
       <div class="project-body">
         <p>A 5-stage pipelined 32-bit RISC-V processor designed during an industry VLSI internship at Maven Silicon. The pipeline implements the standard fetch, decode, execute, memory, and writeback stages with hazard detection and forwarding logic.</p>
-        <p>During this project, a novel low-power ALU architecture was co-invented using enable gating to suppress switching activity in unused functional units. This work is now a filed patent.</p>
       </div>
     </article>
 
