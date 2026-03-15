@@ -24,16 +24,16 @@
     <article class="project">
       <div class="project-header">
         <div>
-          <h2 class="project-title">FPGA Weather Station</h2>
-          <span class="project-meta">2024–25 &middot; SystemVerilog &middot; Cadence Xcelium</span>
+          <h2 class="project-title">Weather Station ASIC Design</h2>
+          <span class="project-meta">2026 &middot; SystemVerilog &middot; Full ASIC Flow </span>
         </div>
         <a href="https://github.com/calceit" class="project-link" target="_blank">GitHub →</a>
       </div>
       <div class="project-body">
-        <p>A full RTL weather station design targeting a 32.768 kHz clock on an FPGA. The system integrates multiple sensors and peripherals, all coordinated through a custom memory controller with a 4-way round-robin arbiter.</p>
-        <p>The SPI interface drives an MS5803-02BA pressure and temperature sensor. Raw ADC readings from the barometer are compensated using a sequence of PROM coefficients (C1–C6) following the MS5803 datasheet calibration procedure. A separate ADC-based wind vane module reads wind direction.</p>
-        <p>An LCD controller formats and displays live pressure, temperature, wind direction, and elapsed time. The memory controller manages read/write arbitration between all subsystems with no bus contention.</p>
-        <p>Verified using Cadence Xcelium with a behavioural testbench that models the SPI MISO responses of the MS5803, including PROM read and D1/D2 conversion phases.</p>
+        <p>A weather station ASIC targeting the AMS 0.35µm process, integrating rain, wind direction, and wind speed sensors with both an 8-bit character LCD & a 84x48 pixel LCD.</p>
+        <p>In this team project, I was responsible for mapping out the system's architecture, the memory controller design, and the 8-bit LCD interface.</p>
+        <p>The LCD Controller formats and displays live rain, wind speed, wind direction, and elapsed time. The Memory Controller uses a request/grant interface to coordinate access to shared SRAM. Display accesses are prioritised to ensure low-latency framebuffer updates, while write requests from the rain and wind sensor modules are arbitrated using a round-robin policy. The system interfaces with an 8-kbit single-port SRAM macrocell for intermediate data storage.</p>
+        <p>The RTL was implemented in SystemVerilog and validated through the full ASIC design flow: verification with Cadence Xcelium, synthesis using Synopsys Design Compiler, place-and-route with Cadence Encounter, and post-layout processing in Cadence Virtuoso.</p>
       </div>
     </article>
 
