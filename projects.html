@@ -52,7 +52,21 @@
       </div>
     </article>
 
-    
+    <article class="project">
+      <div class="project-header">
+        <div>
+          <h2 class="project-title">8-bit Bitslice Multiplier</h2>
+          <span class="project-meta"> Jan 2026 &middot; TSMC 180nm &middot; Magic VLSI, Cadence Xcelium</span>
+        </div>
+      </div>
+      <div class="project-body">
+        <p>An 8-bit shift-and-add multiplier created using the custom TSMC 180nm library. The project covered every stage from schematic and layout through RTL, synthesis, and test integration.</p>
+        <p>The control FSM has 11 states managing the shift-and-add algorithm.</p>
+        <p>Each bitslice implements a simple multiplication algorithm, a tristate bus connects the datapath to shared resources. Scan chain (SDI/SDO/Test) was added for DFT, enabling full scan-based testing of all internal state.</p>
+        <p>Layout was done in Magic VLSI following TSMC 180nm design rules. The design was verified using SystemVerilog & Cadence Xcelium.</p>
+      </div>
+    </article>
+ 
     <article class="project">
       <div class="project-header">
         <div>
@@ -78,20 +92,6 @@
       </div>
       <div class="project-body">
         <p>MiniAES Implementation of C++, operates on 16-bit blocks & 16-bit keys. </p>
-      </div>
-    </article>
-
-    <article class="project">
-      <div class="project-header">
-        <div>
-          <h2 class="project-title">8-bit Bitslice Multiplier</h2>
-          <span class="project-meta">2024 &middot; TSMC 180nm &middot; Magic VLSI / Synopsys DC</span>
-        </div>
-      </div>
-      <div class="project-body">
-        <p>A full VLSI design flow for an 8-bit shift-and-add multiplier in TSMC 180nm technology. The project covered every stage from schematic and layout through RTL, synthesis, and test integration.</p>
-        <p>The control FSM has 11 states managing the shift-and-add algorithm. A tristate bus connects the datapath to shared resources. Scan chain (SDI/SDO/Test) was added for DFT, enabling full scan-based testing of all internal state.</p>
-        <p>Layout was done in Magic VLSI following TSMC 180nm design rules. Logic synthesis was performed with Synopsys Design Compiler, targeting area and timing constraints.</p>
       </div>
     </article>
 
