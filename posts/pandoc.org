@@ -1,0 +1,18 @@
+#+TITLE: Automating Posts with Pandoc!
+#+DATE: 2026-04-06
+#+DESCRIPTION: Creating a Pandoc script to convert .org files to .html files. 
+
+
+Pandoc is a universal document converter; give it a file in format, it outputs another. I'm using it here to write new entries for the blog in .org format and then I get to run one command & get a good looking .html file!
+
+The python script uses the .org header to add the title, date & description for both the HTML file it generates from the .org file & to regenerate the blog.html file. The header looks something like this:
+
+#+begin_src
+#+TITLE: Post Title!
+#+DATE: YYYY-MM-DD
+#+DESCRIPTION: Apt Description based on the Post Title!
+#+end_src
+
+The script also has a ~--dry~ flag, which gives me a preview of what the script is going to do without actually writing anything. 
+It's so convenient, I love it.
+

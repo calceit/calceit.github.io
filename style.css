@@ -218,6 +218,11 @@ code {
   font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
 }
 
+pre code {
+  padding: 0;
+  background: none;
+}
+
 .footer-top {
   display: flex;
   justify-content: space-between;

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Blog | Aryan Sahu</title>
+<title>Automating Posts with Pandoc! | Aryan Sahu</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
@@ -21,27 +21,24 @@
 
 <main>
 
-<h1 class="page-title">Blog</h1>
+<h1>Automating Posts with Pandoc!</h1>
+<p class="post-date">Apr 2026</p>
 
-<p class="page-sub">
-Notes, things I've figured out, and occasional longer writeups.
-</p>
-
-<div class="blog-list">
-
-<article class="note">
-<div class="note-date">Apr 2026</div>
-<h2 class="note-title"><a href="pandoc.html">Automating Posts with Pandoc!</a></h2>
-<p>Creating a Pandoc script to convert .org files to .html files.</p>
-</article>
-
-<article class="note">
-<div class="note-date">Feb 2026</div>
-<h2 class="note-title"><a href="weather-station-architecture.html">Weather Station ASIC Architecture</a></h2>
-<p>Architecture diagram & short description of the design & its spec.</p>
-</article>
-
-</div>
+<p>Pandoc is a universal document converter; give it a file in format,
+it outputs another. I'm using it here to write new entries for the blog
+in .org format and then I get to run one command &amp; get a good
+looking .html file!</p>
+<p>The python script uses the .org header to add the title, date &amp;
+description for both the HTML file it generates from the .org file &amp;
+to regenerate the blog.html file. The header looks something like
+this:</p>
+<pre><code>#+TITLE: Post Title!
+#+DATE: YYYY-MM-DD
+#+DESCRIPTION: Apt Description based on the Post Title!
+</code></pre>
+<p>The script also has a <code>--dry</code> flag, which gives me a
+preview of what the script is going to do without actually writing
+anything. It's so convenient, I love it.</p>
 
 </main>
 

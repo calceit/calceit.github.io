@@ -1,8 +1,0 @@
-#+TITLE: Automating Posts with Emacs Org Mode!
-#+DATE: 2026-03-16
-
-#+begin_export html
-<p class="post-date">March 2026</p>
-#+end_export
-
-This is a test.

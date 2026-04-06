@@ -80,6 +80,8 @@ def parse_org_meta(text):
         m = re.match(r'^#\+(\w+):\s*(.+)', line)
         if m:
             meta[m.group(1).upper()] = m.group(2).strip()
+        elif line.strip():  # non-blank, non-keyword = content starts, stop
+            break
     return meta
 
 
