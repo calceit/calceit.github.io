@@ -1,0 +1,14 @@
+#+TITLE: Weather Station ASIC Architecture
+#+DATE: 2026-02-01
+#+DESCRIPTION: Architecture diagram & short description of the design & its spec.
+
+This diagram shows the system architecture of the weather station ASIC.
+
+#+begin_export html
+<img src="Architecture Diagram.jpg" alt="Weather Station Architecture Diagram" style="width:100%; margin-top:20px;">
+#+end_export
+
+The design integrates rain, wind direction, and wind speed sensors with
+both an 8-bit character LCD and an 48×84 pixel display. The system was
+implemented in SystemVerilog and validated through the full ASIC design
+flow.
